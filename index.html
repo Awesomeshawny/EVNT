@@ -54,7 +54,7 @@
             }
 
             .btn-secondary {
-                background-color: #90caf9;
+                background-color: #42a5f5;
                 border-color: #90caf9;
             }
 
@@ -110,7 +110,7 @@
             <div class="mt-5">
                 <div class="text-muted mb-2">Trying to book an event?</div>
                 <button id="toggleSearch" class="btn btn-secondary mb-1">Click here</button>
-                
+
 
                 <div id="searchContainer" style="display:none;">
                     <input type="text" id="searchInput" class="form-control mb-1" placeholder="Search...">
@@ -148,6 +148,23 @@
             searchDropdown.addEventListener('change', () => {
                 if (searchDropdown.value) {
                     window.location.href = 'form.html';
+                }
+            });
+        </script>
+
+        <script>
+            const loginBtn = document.querySelector('.btn-primary');
+            const emailInput = document.querySelector('input[type="text"]');
+            const passwordInput = document.querySelector('input[type="password"]');
+
+            loginBtn.addEventListener('click', () => {
+                const email = emailInput.value.trim().toLowerCase();
+                const password = passwordInput.value; // you can handle password check if needed
+
+                if (email === 'staff@staff.com') {
+                    window.location.href = 'staff.html';
+                } else if (email === 'manager@manager.com') {
+                    window.location.href = 'manager.html';
                 }
             });
         </script>

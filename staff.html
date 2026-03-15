@@ -166,7 +166,7 @@
 
                 function displayEventDetails(event) {
                     const involvementText = event.working ? "You are working this" : "You are not working this";
-                    const fullDetailsDisabled = event.working ? "disabled" : "";
+                    const fullDetailsDisabled = event.working ? "" : "disabled";
                     eventDetailsEl.innerHTML = `
                         <h5>Event Preview</h5>
                         <p><strong>Event Title:</strong> ${event.title}</p>
