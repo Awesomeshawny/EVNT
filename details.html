@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anna's Birthday - Staff View</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body {
+                background-color: #e3f2fd;
+                min-height: 100vh;
+                padding-bottom: 40px;
+            }
+
+            .row.bg-light {
+                background-color: #bbdefb !important;
+                padding: 15px;
+                border-radius: 8px;
+                align-items: center;
+            }
+
+            h1, h2, h3 {
+                color: #1e88e5;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+
+            .panel {
+                background-color: #ffffff;
+                border-radius: 8px;
+                padding: 15px;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+                margin-bottom: 20px;
+            }
+
+            .textbox {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #90caf9;
+                border-radius: 5px;
+                background-color: #e3f2fd;
+            }
+
+            .textbox[readonly] {
+                background-color: #f0f4f8;
+            }
+
+            ul.employee-list {
+                list-style: none;
+                padding-left: 0;
+            }
+
+            ul.employee-list li {
+                padding: 6px 0;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            ul.employee-list li:last-child {
+                border-bottom: none;
+            }
+
+            .ack-button {
+                width: 100%;
+                padding: 12px;
+                font-size: 1.1rem;
+                margin-top: 15px;
+            }
+
+            .content-left {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            @media (max-width: 768px) {
+                .content-left, .content-right {
+                    flex: 1 1 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="row bg-light mb-4">
+            <div class="col">
+                <h1>Anna's Birthday</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 content-left">
+
+                    <h2>Event Details</h2>
+                    <div class="panel">
+                        <p><strong>Event Time:</strong> 5:00pm - 7:00pm</p>
+                        <p><strong>Group Size:</strong> 10 People</p>
+                        <p><strong>Event Type:</strong> Birthday Party</p>
+                        <p><strong>Serving Required:</strong> Yes</p>
+                        <p><strong>Closed for Event:</strong> No</p>
+                        <p><strong>Assigned Zone:</strong> Table 1 / Table 2</p>
+                    </div>
+
+                    <h2>Assigned Role</h2>
+                    <div class="panel">
+                        <textarea class="textbox" rows="2" readonly>John Doe will be serving.</textarea>
+                    </div>
+
+                    <h2>Special Requests</h2>
+                    <div class="panel">
+                        <textarea class="textbox" rows="8" readonly>
+- 2 guests have severe peanut allergies.
+- 1 guest is gluten-free.
+- We will have one guest arriving in a motorized wheelchair, so please ensure our assigned table has removable chairs and is near the entrance.
+- We will bring our own themed birthday cake
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 content-right">
+                    <h3>Other Employees With Roles</h3>
+                    <div class="panel">
+                        <ul class="employee-list mb-0">
+                            <li>Maxwell Kang</li>
+                            <li>Patrick Beverly</li>
+                            <li>Amanda de Sousa</li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-primary ack-button" id="ackButton">Acknowledge Receipt</button>
+                    <p id="ackText" style="display:none; color:green; font-weight:500; margin-top:10px;">
+                        You have acknowledged receipt of these details.
+                    </p>
+                </div>
+            </div>
+
+            <script>
+                const ackButton = document.getElementById('ackButton');
+                const ackText = document.getElementById('ackText');
+
+                ackButton.addEventListener('click', function () {
+                    ackButton.style.display = 'none';
+                    ackText.style.display = 'block';
+                });
+            </script>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

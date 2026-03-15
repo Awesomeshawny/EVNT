@@ -129,7 +129,16 @@
                     <div class="col-md-7">
                         <div class="mb-3">
                             <label class="form-label" for="peopleSlider">Number of People: <span id="peopleValue">2</span></label>
-                            <input type="range" class="form-range" id="peopleSlider" min="2" max="16" step="1" value="2">
+                            <input type="range" class="form-range" id="peopleSlider" min="2" max="20" step="1" value="2">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Event Type</label>
+                            <select class="form-select">
+                                <option>Conference</option>
+                                <option>Birthday Party</option>
+                                <option>Club Meeting</option>
+                                <option>Other</option>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Menu Substitutions</label>
@@ -202,7 +211,7 @@
                         <p id="successMessage"></p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="window.location.href='index.html'">OK</button>
+                        <button type="button" class="btn btn-primary" onclick="window.location.href = 'index.html'">OK</button>
                     </div>
                 </div>
             </div>
